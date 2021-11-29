@@ -1,7 +1,7 @@
 # aws-dx-failover
 
 
-***aws-dx-failover*** contains sample code for the Blog Post (link to blog post).
+***aws-dx-failover*** contains sample code for the Blog Post "Direct Connect Monitoring and Failover with Anomaly Detection".
 
 ## How it works
 
