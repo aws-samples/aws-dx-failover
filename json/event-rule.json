@@ -1,0 +1,18 @@
+{
+  "source": [
+    "aws.cloudwatch"
+  ],
+  "detail-type": [
+    "CloudWatch Alarm State Change"
+  ],
+  "resources": [
+    "arn:aws:cloudwatch:eu-west-1:123456789012:alarm:dxvif-fgihxxxx 192.168.2.10 Packet Loss", "arn:aws:cloudwatch:eu-west-1:123456789012:alarm:dxvif-ffq0wwww 192.168.1.10 Packet Loss"
+  ],
+  "detail": {
+    "state": {
+      "value": [
+        "ALARM"
+      ]
+    }
+  }
+}

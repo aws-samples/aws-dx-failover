@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "directconnect:DescribeVirtualInterfaces",
+                "sns:Publish",
+                "directconnect:StartBgpFailoverTest"
+            ],
+            "Resource": [
+                "arn:aws:directconnect:*:123456789012:dxvif/dxvif-ffq0wwww",
+                "arn:aws:directconnect:*:123456789012:dxvif/dxvif-fgihxxxx",
+                "arn:aws:sns:eu-west-1:123456789012:DX-Failover-Topic"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "support:CreateCase",
+            "Resource": "*"
+        }
+    ]
+}
