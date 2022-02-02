@@ -67,7 +67,8 @@ def notifyMinimumVifsReached():
 def notifyVifFailover():
     customMessage='You are receiving this email because your Amazon CloudWatch Alarm "'+alarmName+'" in the '+region+' region has entered the '+state+' state at ' + timestamp + '.\n\n'
     customMessage=customMessage + 'As a result, Virtual Interface ' + alarmVifId + ' failover was triggered, and the interface put in "testing" state. '
-    customMessage=customMessage + 'Support Case ' + caseId + ' was automatically open for follow up.'
+    # Uncomment the following line if you enable automatic support case opening
+    # customMessage=customMessage + 'Support Case ' + caseId + ' was automatically open for follow up.'
     Subject= '*** WARNING *** Automatic failover triggered for VIF ' + alarmVifId
     print(Subject)
     response = platform_endpoint.publish(
@@ -129,6 +130,7 @@ def lambda_handler(event, context):
         notifyMinimumVifsReached()
     else:
         failoverVif()
-        openSupportCase()
+        # Uncomment the following line to automatically open a support case when failover is performed (Business or Enterprise Support plans only)
+        # openSupportCase()
         notifyVifFailover()
     return
