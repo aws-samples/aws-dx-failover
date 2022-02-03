@@ -57,6 +57,12 @@ EMAIL    - Email address to CC when opening a support case (e.g. 'name@example.c
 - A sample pattern can be found in the file "event-rule.json".
 - You will need to save the pattern before creating the rule.
 
+### 6. (Optional) Enabling the creation of a Support Case.
+
+- Uncomment the appropiate lines in the lambda_handler and notifyVifFailover functions to automatically create a support case when failover is performed. This option is only available to AWS customers with Business or Enterprise support plans.
+
+*Note*: Auto-created support case may reduce a part of your operational efforts, but in general the investigation process requires additional input from you such as information about business impact, symptom, state of issue occurrence. Please note that just opening a support case doesn’t solve the issue since it’s an interactive process for issue resolution. So, please carefully use this function as it requires to review your operational flow.
+
 ## Testing
 
 - You may test this solution during a maintenance window by making the monitored IP addresses unavailable (for example, by shutting down the loopback interface in the router) and waiting for the CloudWatch Alarm to trigger the Lambda function.
