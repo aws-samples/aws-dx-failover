@@ -42,11 +42,11 @@ Before deploying this solution, you will need to have Direct Connect monitoring 
 
 - The Lambda function uses the following environment variables, that must be added on the "Configuration" tab:
 
-VIFLIST  - Comma separated list of VIF IDs (e.g. 'dxvif-ffq0wwww,dxvif-fgihxxxx')
-MINVIFS  - Minimum number of VIFs to be kept in "available" state (e.g. '1' or '2')
-SNSARN   - SNS Topic for sending notifications ARN (e.g. 'arn:aws:sns:eu-west-1:123456789012:DX-Failover-Topic')
-FAILOVER - Time to put the VIF in "testing" mode (e.g. '180', '120')
-EMAIL    - Email address to CC when opening a support case (e.g. 'name@example.com')
+- VIFLIST  - Comma separated list of VIF IDs (e.g. 'dxvif-ffq0wwww,dxvif-fgihxxxx')
+- MINVIFS  - Minimum number of VIFs to be kept in "available" state (e.g. '1' or '2')
+- SNSARN   - SNS Topic for sending notifications ARN (e.g. 'arn:aws:sns:eu-west-1:123456789012:DX-Failover-Topic')
+- FAILOVER - Time to put the VIF in "testing" mode (e.g. '180', '120')
+- EMAIL    - Email address to CC when opening a support case (e.g. 'name@example.com')
 
 ### 5. Create a CloudWatch EventBridge rule to trigger the Lambda Function
 
